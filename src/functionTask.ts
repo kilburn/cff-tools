@@ -68,6 +68,6 @@ export class FunctionTask {
     withPublish?: boolean;
   }): Promise<DescribeFunctionResult> {
     await this.putFunction(options);
-    return this.function.describeFunction('DEVELOPMENT');
+    return this.function.describeFunction(options?.withPublish ? 'LIVE' : 'DEVELOPMENT');
   }
 }
