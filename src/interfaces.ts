@@ -38,7 +38,7 @@ export interface FunctionRequest {
 export interface FunctionResponse {
   statusDescription: string;
   headers: Headers;
-  cookies: Cookies;
+  cookies?: Cookies;
   statusCode: number;
 }
 export interface RequestContext {
